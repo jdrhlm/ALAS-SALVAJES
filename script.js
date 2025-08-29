@@ -1,4 +1,4 @@
-        // Cart functionality
+// Cart functionality
         let cart = [];
         let cartCount = 0;
 
@@ -123,15 +123,17 @@
             });
 
             // Menu category switching
-            const categoryBtns = document.querySelectorAll('.category-btn');
+            const menuCategories = document.querySelector('.menu-categories');
             const menuGrids = document.querySelectorAll('.menu-grid');
 
-            categoryBtns.forEach(btn => {
-                btn.addEventListener('click', () => {
+            menuCategories.addEventListener('click', (e) => {
+                const target = e.target;
+                if (target.classList.contains('category-btn')) {
                     // Remove active class from all buttons
+                    const categoryBtns = document.querySelectorAll('.category-btn');
                     categoryBtns.forEach(b => b.classList.remove('active'));
                     // Add active class to clicked button
-                    btn.classList.add('active');
+                    target.classList.add('active');
 
                     // Hide all menu grids
                     menuGrids.forEach(grid => {
@@ -139,7 +141,7 @@
                     });
 
                     // Show selected menu grid
-                    const category = btn.getAttribute('data-category');
+                    const category = target.getAttribute('data-category');
                     const targetGrid = document.getElementById(category);
                     if (targetGrid) {
                         targetGrid.classList.remove('hidden');
@@ -157,12 +159,12 @@
 
                     // Button click animation
                     anime({
-                        targets: btn,
+                        targets: target,
                         scale: [1, 1.1, 1],
                         duration: 300,
                         easing: 'easeOutExpo'
                     });
-                });
+                }
             });
 
             // Add to cart functionality
@@ -369,9 +371,11 @@
             });
 
             message += `*TOTAL: S/ ${total.toFixed(2)}*\n\n`;
-            message += `📍 *Dirección de entrega:*\n`;
+            message += `📍 *Dirección de entrega:*
+`;
             message += `(Por favor completa tu dirección)\n\n`;
-            message += `📞 *Teléfono de contacto:*\n`;
+            message += `📞 *Teléfono de contacto:*
+`;
             message += `(Por favor completa tu teléfono)\n\n`;
             message += `⏰ Horario: 6:00 PM - 11:30 PM\n`;
             message += `🏍️ Delivery: S/ 3.00 en Chorrillos`;
@@ -723,5 +727,3 @@
         }
 
         preloadImages();
-
-        
