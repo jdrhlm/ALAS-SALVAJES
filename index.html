@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navegación -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
@@ -25,9 +24,11 @@
                 <li><a href="#prensa" class="nav-link">Prensa</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-            <div class="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span class="cart-count">0</span>git 
+            <div>
+                <a href="#contacto"  class="cart-icon">
+                <i  class="fas fa-shopping-cart"></i>
+                <span class="cart-count"></span>
+                </a>
             </div>
             <div class="hamburger">
                 <span></span>
@@ -37,8 +38,13 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="inicio" class="hero">
+        <div id="carrusel" class="carrusel-seccion-fondo">
+            <div class="carrusel-images-wrapper">
+                <img src="imagenes/alto-angulo-de-alitas-de-pollo-frito-con-variedad-de-salsas-y-bebidas-gaseosas.jpg" alt="Alitas 1" class="carrusel-image active">
+            </div>
+        </div>
+
         <div class="hero-background"></div>
         <div class="hero-content">
             <div class="hero-text">
@@ -48,17 +54,10 @@
                     <button class="btn-primary order-now">Ordena Ahora</button>
                     <button class="btn-secondary view-menu">Ver Menú</button>
                 </div>
-            </div>
-            <div class="hero-image">
-                <div class="floating-wings"></div>
-            </div>
         </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
+
     </section>
 
-    <!-- Sección Especialidades -->
     <section id="especialidades" class="specialties">
         <div class="container">
             <h2 class="section-title">Nuestras Especialidades</h2>
@@ -82,7 +81,6 @@
         </div>
     </section>
 
-    <!-- Menú -->
     <section id="menu" class="menu-section">
         <div class="container">
             <h2 class="section-title">Nuestro Menú Salvaje</h2>
@@ -209,7 +207,6 @@
         </div>
     </section>
 
-    <!-- Testimonios -->
     <section id="testimonios" class="testimonials">
         <div class="container">
             <h2 class="section-title">Lo que Dicen Nuestros Clientes</h2>
@@ -244,7 +241,6 @@
         </div>
     </section>
 
-    <!-- Sección de Prensa -->
     <section id="prensa" class="press">
         <div class="container">
             <h2 class="section-title">Reconocidos por la Prensa</h2>
@@ -262,7 +258,7 @@
 
                 <div class="press-item">
                     <div class="press-logo">
-                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTIwIDgwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRkY2MzQ3Ii8+Cjx0ZXh0IHg9IjYwIiB5PSI0NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R0FTVE9OT01JQSBZPC90ZXh0Pgo8L3N2Zz4K" alt="Gastronomía y Sabor">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjgwIiB2aWV3Qm94PSIwIDAgMTIwIDgwIiBmaWxsPSIjRkY2MzQ3Ii8+Cjx0ZXh0IHg9IjYwIiB5PSI0NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+R0FTVE9OT01JQSBZPC90ZXh0Pgo8L3N2Zz4K" alt="Gastronomía y Sabor">
                     </div>
                     <div class="press-content">
                         <h3>"Innovación gastronómica en Chorrillos"</h3>
@@ -285,7 +281,6 @@
         </div>
     </section>
 
-    <!-- Contacto y Ubicación -->
     <section id="contacto" class="contact">
         <div class="container">
             <h2 class="section-title">Visítanos o Haz tu Pedido</h2>
@@ -341,7 +336,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -349,9 +343,9 @@
                     <h3>ALAS SALVAJES</h3>
                     <p>Las alitas más salvajes de Lima con sabores únicos peruanos desde Chorrillos para todo Lima.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.facebook.com/AlaSalvajes/?locale=es_LA" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/alassalvajes/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@alas.salvajes.oficial" target="_blank"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 
@@ -379,10 +373,5 @@
     </footer>
 
     <script src="script.js"></script>
-
-
-       
-
-    
 </body>
 </html>
